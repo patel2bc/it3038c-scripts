@@ -11,6 +11,12 @@ http.createServer((req, res) => {
     });
   } else if(req.url.match("/sysinfo")) {
     myHostName=os.hostname();
+    myTotalMem=(os.totalmem() / 1000000);
+    myFreeMem=(os.freemem() / 1000000);
+    myOSdays=Math.floor(os.uptime() / 86000);
+    myOShrs=Math.floor(os.uptime() % (3600*24) / 3600);
+    myOSmins=Math.floor(os.uptime() % 3600 / 60);
+    myOSseconds=Math.floor(os.uptime() % 60);
     html=`
     <!DOCTYPE html>
     <html>
@@ -20,10 +26,10 @@ http.createServer((req, res) => {
       <body>
         <p>Hostname: ${myHostName}</p>
         <p>IP: ${ip.address()}</p>
-        <p>Server Uptime: </p>
-        <p>Total Memory: </p>
-        <p>Free Memory: </p>
-        <p>Number of CPUs: </p>
+        <p>Server Uptime: Days: ${myOSdays} Hours: ${myOShrs} Minutes: ${myOSmins} Seconds: ${myOSseconds}</p>
+        <p>Total Memory: ${myTotalMem} MB</p>
+        <p>Free Memory: ${myFreeMem}</p>
+        <p>Number of CPUs: ${os.cpus().length}</p>
       </body>
     </html>`
     res.writeHead(200, {"Content-Type": "text/html"});
