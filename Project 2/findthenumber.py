@@ -40,3 +40,13 @@ for info in contact_info:
         print("Email: ", email_match.group())
     elif phone_match:
         print("Phone: ", phone_match.group())
+
+# Script by Bunci Patel
+# Sources 
+# https://docs.python.org/3/tutorial/inputoutput.html
+# https://www.digitalocean.com/community/tutorials/how-to-work-with-web-data-using-requests-and-beautiful-soup-with-python-3
+# https://stackoverflow.com/questions/39757805/using-python-requests-and-beautiful-soup-to-pull-text
+# https://www.zenrows.com/knowledge/python-requests-and-beautifulsoup-integration
+# https://www.keh.com/
+# https://www.microcenter.com/
+# https://www.lttstore.com/
