@@ -26,3 +26,11 @@ Output:
 Take this ratio with a grain of salt. Out of 231 comments, 95.24% are positive and 4.76% are negative.
 
 Notes: The user has the options to scroll back up and review a summary of the top 5 reddit posts that are related to your topic. 
+
+Sources: 
+https://praw.readthedocs.io/en/stable/getting_started/quick_start.html
+https://praw.readthedocs.io/en/stable/code_overview/models/subreddit.html
+https://praw.readthedocs.io/en/stable/getting_started/installation.html
+https://praw.readthedocs.io/en/stable/getting_started/installation.html
+https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
+
